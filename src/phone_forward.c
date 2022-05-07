@@ -85,10 +85,12 @@ void phfwdRemove(PhoneForward *pf, char const *num) {
    }
    /// W tym miejscu algorytmu mamy już zapewnione to, że zeszliśmy ścieżką @p num
    PhoneForward *pf2 = phfwdNew();
-   clearNode(pf2->root);
-   pf2->root = trav;
-   /// Wywoułujemy phfwdDelete(), by usunąć poddrzewo
-   phfwdDelete(pf2);
+   if (pf2 != NULL) {
+      clearNode(pf2->root);
+      pf2->root = trav;
+      /// Wywoułujemy phfwdDelete(), by usunąć poddrzewo
+      phfwdDelete(pf2);
+   }
 }
 
 bool phfwdAdd(PhoneForward *pf, char const *num1, char const *num2) {
