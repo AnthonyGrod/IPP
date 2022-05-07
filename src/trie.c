@@ -13,9 +13,15 @@
 
 trieNode *createNode(trieNode *fatherNode) {
    trieNode *node = malloc(sizeof(trieNode));
-   node->children = calloc(10, sizeof(trieNode));
-   node->forward = NULL;
-   node->father = fatherNode;
+   if (node != NULL) {
+      node->children = calloc(10, sizeof(trieNode));
+      if (node->children == NULL) {
+         free(node);
+         return NULL;
+      }
+      node->forward = NULL;
+      node->father = fatherNode;
+   }
    return node;
 }
 
