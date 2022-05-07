@@ -35,7 +35,7 @@ void clearNode(trieNode *node) {
       /// Iterujemy się po wszystkich dzieciach ojca
       for (int i = 0; i < 10; i++) {
          /** Sprawdzamy, czy pole @p ((node->father)->children)[i] wskazuje
-          * na usuwany przez nas wierzchołek
+          * na usuwany przez nas wierzchołek.
          */
          if (((node->father)->children)[i] == node) {
             /// Jeśli tak, to ustawiamy to pole na wartość @p NULL i wychodzimy z pętli
