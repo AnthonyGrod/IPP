@@ -256,19 +256,19 @@ void test_memory_allocation_failure(bool testReverse){
             }
         }
 
-        if(operation >= 80) {
-            // reverse
-            if(testReverse) {
-                PhoneNumbers * pn = phfwdReverse(pf, str1);
-                if(pn != NULL) {
-                    int t = 0;
-                    while (phnumGet(pn, t) != NULL) {
-                        t++;
-                    }
-                }
-                phnumDelete(pn);
-            }
-        }
+        // if(operation >= 80) {
+        //     // reverse
+        //     if(testReverse) {
+        //         PhoneNumbers * pn = phfwdReverse(pf, str1);
+        //         if(pn != NULL) {
+        //             int t = 0;
+        //             while (phnumGet(pn, t) != NULL) {
+        //                 t++;
+        //             }
+        //         }
+        //         phnumDelete(pn);
+        //     }
+        // }
 
 
         phfwdAdd(pf, str1, str2);
