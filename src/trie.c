@@ -26,13 +26,13 @@ void clearNode(trieNode *node) {
    free(node->forward);
    free(node->children);
    if (node->father != NULL) {
-      // Iterujemy się po wszystkich dzieciach ojca
+      /// Iterujemy się po wszystkich dzieciach ojca
       for (int i = 0; i < 10; i++) {
-         /** Sprawdzamy, czy pole ((node->father)->children)[i] wskazuje
+         /** Sprawdzamy, czy pole @p ((node->father)->children)[i] wskazuje
           * na usuwany przez nas wierzchołek
          */
          if (((node->father)->children)[i] == node) {
-            // Jeśli tak, to ustawiamy to pole na wartość NULL i wychodzimy z pętli
+            /// Jeśli tak, to ustawiamy to pole na wartość @p NULL i wychodzimy z pętli
             ((node->father)->children)[i] = NULL;
             break;
          }
