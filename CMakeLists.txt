@@ -13,17 +13,21 @@ set_property(GLOBAL PROPERTY RULE_MESSAGES OFF)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
 # Ustawiamy wspólne opcje kompilowania dla wszystkich wariantów projektu.
-set(CMAKE_C_FLAGS "-std=c17 -Wall -Wextra -Wno-implicit-fallthrough")
+set(CMAKE_C_FLAGS "-std=c17 -Wall -Wextra -Wno-implicit-fallthrough -g")
 # Domyślne opcje dla wariantów Release i Debug są sensowne.
 # Jeśli to konieczne, ustawiamy tu inne.
 set(CMAKE_C_FLAGS_RELEASE "-O2 -DNDEBUG")
-# set(CMAKE_C_FLAGS_DEBUG "-g")
+set(CMAKE_C_FLAGS_DEBUG "-g")
 
 # Wskazujemy pliki źródłowe.
 set(SOURCE_FILES
     src/phone_forward.h
     src/phone_forward.c
-    src/phone_forward_example.c)
+    src/phone_forward_example.c
+    src/trie.h
+    src/trie.c
+    src/adjunctive_functions.h
+    src/adjunctive_functions.c)
 
 # Wskazujemy plik wykonywalny.
 add_executable(phone_forward ${SOURCE_FILES})

@@ -11,18 +11,31 @@
 
 #include <stdbool.h>
 #include <stddef.h>
+#include "trie.h"
 
 /**
  * To jest struktura przechowująca przekierowania numerów telefonów.
  */
-struct PhoneForward;
-typedef struct PhoneForward PhoneForward;
+typedef struct PhoneForward {
+    /** 
+    * @p root - wskaźnik na korzeń drzewa prefiksowego
+    */
+    trieNode *root;
+} PhoneForward;
 
 /**
  * To jest struktura przechowująca ciąg numerów telefonów.
  */
-struct PhoneNumbers;
-typedef struct PhoneNumbers PhoneNumbers;
+typedef struct PhoneNumbers {
+    /** 
+    * @p numbers - wskaźnik na dwuwymiarową tablicę przechowującą numery telefów
+    */
+    char **numbers;
+     /** 
+    * @p length - długość przechowywanej tablicy
+    */
+    size_t length;
+} PhoneNumbers;
 
 /** @brief Tworzy nową strukturę.
  * Tworzy nową strukturę niezawierającą żadnych przekierowań.
