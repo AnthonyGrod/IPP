@@ -1,3 +1,2 @@
 # IPP
-Jest to projekt zaliczeniowy przedmiotu Indywidualny Projekt Programistyczny na II semestrze Informatyki na MIMUW.
-Moduł umożliwia efektywne przekierowanie numerów telefonów z użyciem drzew sufiksowych.
+This is the final project for the course "Individual Programming Project" in the 2nd semester of Computer Science at MIMUW (University of Warsaw Faculty of Mathematics, Informatics, and Mechanics). The module enables efficient phone number redirection using suffix trees.
